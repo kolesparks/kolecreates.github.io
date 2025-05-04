@@ -69,10 +69,15 @@
                 border-radius: 0.5em;
                 background-color: #00000011;
                 white-space: nowrap;
+                margin-bottom: 1em;
             }
 
             article {
                 width: 100%;
+            }
+
+            article h2 {
+                line-height: 0.5em;
             }
 
             article h2 + p {
@@ -133,6 +138,7 @@
             </section>
 
             <nav>
+                <a href="#single-file-site">Single File Site</a>
                 <a href="#software-patents">Software Patents</a>
                 <a href="#universal-economic-value">Universal Economic Value</a>
                 <a href="#open-knowledge-engine">Open Knowledge Engine</a>
@@ -143,6 +149,59 @@
                 <a href="#s3-database">S3 as a Database</a>
                 <a href="#thought-diet">Thought Diet</a>
             </nav>
+
+            <article id="single-file-site">
+                <h2>Single File Site</h2>
+                <p>Posted May 4, 2025</p>
+
+                <p>
+                    My blog was previously a multi-page blog statically
+                    generated using my
+                    <a href="https://www.npmjs.com/package/minssg"
+                        >Minimum Static Site Generator (minssg)</a
+                    >. 5-20s from commit to published. Yet, that's not simple
+                    enough for me. Still needed the Bun runtime, a Github
+                    Action, template syntax, etc.
+                </p>
+
+                <p>Introducing, single file site:</p>
+                <ul>
+                    <li>1 file, 1 page</li>
+                    <li>no class names</li>
+                    <li>no separate css files</li>
+                    <li>no separate js files</li>
+                    <li>no build</li>
+                </ul>
+
+                <p>and a couple other things about this new site:</p>
+                <ul>
+                    <li>
+                        no LLM. hand typing and googling things like the old
+                        days still has huge value. might write a post about this
+                        topic.
+                    </li>
+                    <li>html semantics, plain css, js only when necessary</li>
+                </ul>
+
+                <p>
+                    I suspect I could have 100s of blog posts on this page
+                    before noticing any latency. And with modern HTTP streaming,
+                    I might not even notice the latency because the first few
+                    posts load instantly and the rest stream in below the
+                    viewport.
+                </p>
+
+                <p>
+                    This desire for ultra minimalism is catalyzed by my day job
+                    experience where it takes 10m to deploy the simplest
+                    frontend update. THOUSANDS of indirect dependencies, npm
+                    vulnerability warnings, constant breaking changes, bugs
+                    unfixed for years, abstraction lock-in, etc.
+                </p>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="software-patents">
                 <h2>Software Patents</h2>
