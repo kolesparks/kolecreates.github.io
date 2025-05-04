@@ -1,138 +1,778 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- @import './head.html' -->
-    <title>Kole's Blog</title>
-    <style>
-      .container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex: 1;
-        flex-grow: 1;
-        overflow: hidden;
-      }
-      main {
-        flex: 2;
-        padding-right: 20px;
-      }
-      aside {
-        flex: 2;
-        border-left: 1px solid #eee;
-        padding-left: 20px;
-        padding-right: 20px;
-        overflow-y: auto;
-        max-width: 300px;
-      }
-      header {
-        width: 100%;
-        text-align: center;
-      }
-      aside h3 {
-        margin-bottom: 0px;
-      }
-      aside article {
-        margin-bottom: 15px;
-      }
-      aside h4 {
-        margin-bottom: 5px;
-      }
-      aside p {
-        margin: 5px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Kole's Blog</h1>
-    </header>
-    <div class="container">
-      <main>
-        <h2>About Me</h2>
-        <p>
-          I spend an insane amount of time on the computer and have for many
-          years. I find software deeply facinating. I feel that there are
-          secrets still hidden within the nature of computing.
-        </p>
-        <p>
-          However, computing is just a piece of the puzzle. The world is an
-          integrated system - no part isn't of at least some interest to me.
-        </p>
-        <p>
-          Most important is my wife Anna, Mr. Moose, Calvin, and our family and friends.
-        </p>
-      </main>
+    <head>
+        <title>Kole Sparks</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <style>
+            html {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                max-height: 100%;
+                overflow: hidden;
+            }
+            body {
+                display: grid;
+                grid-template-columns: 10% 80% 10%;
+                grid-template-rows: 5em 1fr 3em;
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                max-height: 100%;
+                max-width: 100%;
+                overflow-y: auto;
+            }
 
-      <aside>
-        <h3>Recent Posts</h3>
-        <article>
-          <h4>Software Patents</h4>
-          <p class="meta">Posted on August 12, 2024</p>
-          <p>
-            Good, Bad, or Ugly
-          </p>
-          <a href="posts/software-patents.html">Read more</a>
-        </article>
-        <article>
-          <h4>Universal Economic Value</h4>
-          <p class="meta">Posted on August 12, 2024</p>
-          <p>
-            Solve puzzles. Make Money.
-          </p>
-          <a href="posts/universal-economic-value.html">Read more</a>
-        </article>
-        <article>
-          <h4>Open Knowledge Engine</h4>
-          <p class="meta">Posted on August 12, 2024</p>
-          <p>
-            Like wikipedia but programatically interactive.
-          </p>
-          <a href="posts/open-knowledge-engine.html">Read more</a>
-        </article>
-        <article>
-          <h4>Cellular Agriculture</h4>
-          <p class="meta">Posted on August 12, 2024</p>
-          <p>
-            One of the most important topics in the history of human technology.
-          </p>
-          <a href="posts/cellular-agriculture.html">Read more</a>
-        </article>
-        <article>
-          <h4>k</h4>
-          <p class="meta">Posted on August 8, 2024</p>
-          <p>
-            Most programming languages drop you off the IO cliff, leave you in
-            the middle of turing complete nowhere, invoice you after "it works
-            on my machine".
-          </p>
-          <a href="posts/k.html">Read more</a>
-        </article>
-        <article>
-          <h4>jsolite</h4>
-          <p class="meta">Posted on August 6, 2024</p>
-          <p>javascript object syntax over sqlite</p>
-          <a href="posts/jsolite.html">Read more</a>
-        </article>
-        <article>
-          <h4>TCP Relay Server</h4>
-          <p class="meta">Updated on August 3, 2024</p>
-          <p>"Written in Rust"™️®</p>
-          <a href="posts/tcp-relay-server.html">Read more</a>
-        </article>
-        <article>
-          <h4>S3 as a Database</h4>
-          <p class="meta">Updated on August 3, 2024</p>
-          <p>Can S3 be used in place of a database?</p>
-          <a href="posts/s3db.html">Read more</a>
-        </article>
-        <article>
-          <h4>Thought Diet</h4>
-          <p class="meta">Updated on August 3, 2024</p>
-          <p>Today I'm starting a thought diet. Here are the guidelines:</p>
-          <a href="posts/thought-diet.html">Read more</a>
-        </article>
-      </aside>
-    </div>
-    <!-- @import './footer.html' -->
-  </body>
+            header {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                padding: 1em;
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                padding: 1em;
+                max-width: 100%;
+            }
+
+            section {
+                width: 100%;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                flex-wrap: nowrap;
+                width: 100%;
+                overflow-x: scroll;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #000;
+                padding: 0.5em;
+                border-radius: 0.5em;
+                background-color: #00000011;
+                white-space: nowrap;
+            }
+
+            article {
+                width: 100%;
+            }
+
+            article h2 + p {
+                color: #000;
+                opacity: 0.54;
+                font-size: 1em;
+            }
+
+            article a {
+                word-wrap: break-word;
+            }
+
+            hr {
+                border-top: 2px dotted #000;
+                width: 20em;
+                margin-top: 1em;
+                margint-bottom: 1em;
+                opacity: 0.28;
+            }
+
+            hr + a {
+                color: #000;
+                opacity: 0.54;
+            }
+
+            footer {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                background-color: #f8f8f8;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="top">Kole Sparks</h1>
+        </header>
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <p>
+                    I spend an insane amount of time on the computer and have
+                    for many years. I find software deeply facinating. I feel
+                    that there are secrets still hidden within the nature of
+                    computing.
+                </p>
+                <p>
+                    However, computing is just a piece of the puzzle. The world
+                    is an integrated system - no part isn't of at least some
+                    interest to me.
+                </p>
+                <p>
+                    Most important is my wife Anna, Mr. Moose, Calvin, and our
+                    family and friends.
+                </p>
+            </section>
+
+            <nav>
+                <a href="#software-patents">Software Patents</a>
+                <a href="#universal-economic-value">Universal Economic Value</a>
+                <a href="#open-knowledge-engine">Open Knowledge Engine</a>
+                <a href="#cellular-agriculture">Cellular Agriculture</a>
+                <a href="#k">K</a>
+                <a href="#jsolite">jsolite</a>
+                <a href="#tcp-relay-server">TCP Relay Server</a>
+                <a href="#s3-database">S3 as a Database</a>
+                <a href="#thought-diet">Thought Diet</a>
+            </nav>
+
+            <article id="software-patents">
+                <h2>Software Patents</h2>
+                <p>Posted Aug 22, 2024</p>
+
+                <p>Good, Bad, or Ugly</p>
+
+                <p>
+                    Recently came across a software company with over a dozen
+                    patent numbers listed at the bottom of their website. In
+                    looking at a few I noticed a pattern.
+                </p>
+
+                <p>
+                    The patent filing includes a beefy PDF specification thats
+                    around 40 pages long. The core idea is usually captured by
+                    the abstract and perhaps a single diagram. The rest of the
+                    PDF is filled in with many different use case examples,
+                    variations of the same diagram, and pages of text explaining
+                    each diagram.
+                </p>
+
+                <p>
+                    Most importantly I noticed that the core idea is very
+                    high-level. The specification is NOT nearly enough
+                    instruction to develop the actual thing. It takes
+                    considerable time and technical effort to take one of these
+                    ideas and create an actual working system.
+                </p>
+
+                <p>So i'm left wondering:</p>
+
+                <ul>
+                    <li>
+                        <p>
+                            Do these patents exist to protect ideas that would
+                            otherwise be too easy to "steal" or re-invent
+                            independently?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Is the idea worth more than the implementation?
+                            Perhaps, but implementation is hard, and there's
+                            almost always multiple ways of doing it, each way
+                            with pros and cons over others. There's so much room
+                            for competition just within implementation of the
+                            same idea.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If I were to build a system similar to the one
+                            described in one of these patents - where is the
+                            line of infringement? What can be similar and what
+                            must be different?
+                        </p>
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="universal-economic-value">
+                <h2>Universal Economic Value</h2>
+
+                <p>Posted on August 17th, 2024</p>
+
+                <p>Solve puzzles - make money.</p>
+
+                <p>
+                    I discover the
+                    <a href="https://arcprize.org/play" target="_blank"
+                        >ARC-AGI challenge</a
+                    >
+                    a couple months ago.
+                </p>
+                <p>
+                    It is a challenging series of puzzles with human scores
+                    around 80% while the state-of-the-art algorithm has achieved
+                    only 43% as of August 2024.
+                </p>
+
+                <blockquote>
+                    ARC-AGI is explicitly designed to compare artificial
+                    intelligence with human intelligence. To do this, ARC-AGI
+                    explicitly lists the priors knowledge human have to provide
+                    a fair ground for comparing AI systems. These core knowledge
+                    priors are ones that humans naturally possess, even in
+                    childhood. ... ARC-AGI avoids a reliance on any information
+                    that isn’t part of these priors, for example acquired or
+                    cultural knowledge, like language.
+                </blockquote>
+                <p>
+                    —
+                    <cite
+                        ><a href="https://arcprize.org/arc" target="_blank"
+                            >https://arcprize.org/arc</a
+                        ></cite
+                    >
+                </p>
+
+                <p>
+                    Discovering ARC-AGI reminded me of a thought experiment I
+                    was obsessed with a few years ago. An idea of "Universl
+                    Econimic Value".
+                </p>
+
+                <p>
+                    Adjacent to universal basic income (UBI), UEV is where there
+                    is some way to capitilize on the basic value of human
+                    intelligence to give everyone some baseline economic worth.
+                </p>
+
+                <p>
+                    Physical labor is UEV historically, but we observe how wages
+                    stagnate while costs explode, and we also observe how labor,
+                    of all types, becomes automated overtime.
+                </p>
+
+                <p>
+                    ARC-AGI rekindled the idea by demonstrating there is still
+                    some fundamental disparity between human and machine
+                    intelligence.
+                </p>
+
+                <p>
+                    What if any human could earn a wage by completing small
+                    cognitive tasks within a larger information system.
+                    Similarly to how car manufacturing pipelines work - where
+                    there are big complicated machines doing large portions -
+                    alongside humans doing smaller more intricate segments.
+                </p>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="open-knowledge-engine">
+                <h2>Open Knowledge Engine</h2>
+                <p>Posted on August 13, 2024</p>
+
+                <p>
+                    Like wikipedia but queryable, highly structured,
+                    programatically interactive.
+                </p>
+                <p>
+                    Like Wolfram Language but open source, open data, and a
+                    simpler interface.
+                </p>
+
+                <p>
+                    The schema of this database and query interface must be
+                    intuitive, and grow at a significantly slower rate than the
+                    data. If the schema and interface grow in complexity equal
+                    to the data - then it adds litte to no value. I'm not sure
+                    if it's possible to find a schema and interface that are
+                    static. I have to imagine at least in the beginning, as data
+                    is added, new requirements of the schema and interface will
+                    be discovered frequently.
+                </p>
+
+                <p>
+                    A semi-automated or fully-automated ingestion pipeline will
+                    be key to success. In comparison, Wolfram Language started
+                    development over 30 years ago. There is a massive amount of
+                    knowledge and it exists in an unstructured form or has a
+                    different structure. My hope is that scripts and language
+                    model technology can aid in the import of knowledge into the
+                    system from sources like Wikipedia, academic papers, open
+                    source projects, text books, and more.
+                </p>
+
+                <p>
+                    Large language models are in some sense type of knowledge
+                    engine - just with a different architecture than imagined
+                    here. LLMs are neural, stochastic, evolved via gradient
+                    descent, tokens in and tokens out. This is a very powerful
+                    type of knowledge engine. However, the type of knowledge
+                    engine I'm talking about is more classical, built on a
+                    relational/graph database, with a query interface. The
+                    advantages of the classical type of knowledge engine is
+                    efficiency (speed, scale, energy), structure/determinism,
+                    and interpretability. The beauty is that both types of
+                    knowledge engines compliment one another.
+                </p>
+
+                <h4>Knowledge Engines</h4>
+                <ul>
+                    <li>
+                        <a href="https://consensus.app" target="_blank">
+                            https://consensus.app
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.wolfram.com/language/"
+                            target="_blank"
+                        >
+                            https://www.wolfram.com/language/
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="cellular-agriculture">
+                <h2>Cellular Agriculture</h2>
+                <p>Posted August 12, 2024</p>
+
+                <p>
+                    One of the most important topics in the history of human
+                    technology.
+                </p>
+
+                <blockquote>
+                    Cellular agriculture focuses on the production of
+                    agricultural products from cell cultures using a combination
+                    of biotechnology, tissue engineering, molecular biology, and
+                    synthetic biology to create and design new methods of
+                    producing proteins, fats, and tissues that would otherwise
+                    come from traditional agriculture.[1] Most of the industry
+                    is focused on animal products such as meat, milk, and eggs,
+                    produced in cell culture rather than raising and
+                    slaughtering farmed livestock which is associated with
+                    substantial global problems of detrimental environmental
+                    impacts (e.g. of meat production), animal welfare, food
+                    security and human health.
+                </blockquote>
+                <p>— <cite>Wikipedia</cite></p>
+
+                <blockquote>
+                    Further scaling will require commercial production in
+                    significantly larger facilities than what currently exists.
+                    Scaling will also require solving an array of complex
+                    challenges that will influence the cost of production. These
+                    challenges span five key areas: cell lines, cell culture
+                    media, bioprocess design, scaffolding, and end product
+                    design and characterization.
+                </blockquote>
+                <p>— <cite>Good Food Institute</cite></p>
+
+                <h3>Resources:</h3>
+                <ul>
+                    <li>
+                        <a
+                            href="https://gfi.org/science/the-science-of-cultivated-meat"
+                            target="_blank"
+                        >
+                            https://gfi.org/science/the-science-of-cultivated-meat/
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://en.wikipedia.org/wiki/Cellular_agriculture"
+                            target="_blank"
+                        >
+                            https://en.wikipedia.org/wiki/Cellular_agriculture
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="k">
+                <h2>k</h2>
+                <p>Posted on August 8, 2024</p>
+
+                <h3>Rant</h3>
+                <p>
+                    Most programming languages drop you off the IO cliff, leave
+                    you in the middle of turing complete nowhere, invoice you
+                    after "it works on my machine".
+                </p>
+                <p>
+                    We end up installing huge graphs of dependencies, some well
+                    maintained, some not, some secure, some vulnerable, some
+                    synergize with eachother, many don't.
+                </p>
+                <p>
+                    We end up paying for and fetching against third-party APIs
+                    to do things our language cannot do, or there is no open
+                    source package for, or our hardware cannot do.
+                </p>
+                <p>
+                    We end up setting up docker stacks, kubernete clusters, "App
+                    Platform" stacks, insert orchestration abstraction here,
+                    composed of proprietary and open source images that are
+                    wired together to have some emergent behavior.
+                </p>
+                <p>
+                    We use postgres or msql because we need persistence, it's
+                    too hard to manage a database, so we use managed database
+                    service in the cloud, but those managed services have bad DX
+                    and are limited so we use PaaS that are wrappers over the
+                    same managed service.
+                </p>
+                <p>
+                    We don't test our systems - or orchestrate dependencies,
+                    mocks, pipelines, headless browsers wrapped in SaaS
+                    products, to give developers who don't test a reason to
+                    stick to their ways.
+                </p>
+                <p>
+                    Some language ecosystems are better at X, don't have problem
+                    Y, can do Z, can't do V, language U is better than language
+                    P for B but not A, good for E but slow for anything else.
+                    Language 123 is perfect and solves all problems but won't be
+                    1.0 for 10 years. Language AAA solves 90% of all problems,
+                    but it doesn't have any open source packages I can leech off
+                    of to build an app - and I'll still be fired for using it in
+                    production even if it can serve 10 billion hello world
+                    requests per second.
+                </p>
+                <p>
+                    We write our code on OS 1 but it doesn't work on OS 2, and
+                    we search the internet for wrappers that will port it to
+                    mobile, or we'd like to run it on an Arduino that has 2kb of
+                    flash memory but a hello world has 4MB runtime overhead.
+                </p>
+
+                <h3>The reality</h3>
+                <p>
+                    Making computers is insaley insanely
+                    <em>insanely</em> complicated. Many many
+                    <em>many</em> humans are needed to build one like we expect
+                    today. Software is also quite complicated. Many
+                    <em>many</em> humans are needed to develop the stuff we use
+                    today. It is a shock that any of it works at all.
+                </p>
+                <p>
+                    So many humans involved makes things even more complicated.
+                    There is intrinsic complexity to computation and engineering
+                    - but emergent complexity in so many humans developing the
+                    technology in parallel.
+                </p>
+                <p>
+                    Standards and protocols are something we humans developed to
+                    wrangle the mess. k is a protocol - a way to talk to
+                    computers and for computers to talk to each other.
+                </p>
+
+                <h3>The protocol</h3>
+                <ul>
+                    <li>
+                        Humans talk to computers through characters over keys,
+                        clicks over buttons, taps over screens, voice over
+                        microphone.
+                    </li>
+                    <li>
+                        Computers talk to each other through bits over wire or
+                        wave.
+                    </li>
+                    <li>Computers talk to humans through pixels, audio.</li>
+                    <li>
+                        Every computer is different. Different hardware,
+                        different software, different internal state, different
+                        location, different connectivity.
+                    </li>
+                    <li>
+                        Every human is different. Different body, different
+                        cognition and behavior, different knowledge, different
+                        location, different capability.
+                    </li>
+                    <li>
+                        A computer should be aware of the knowledge,
+                        capabilities, and constraints of computers it interacts
+                        with.
+                    </li>
+                    <li>
+                        A computer should be aware of the knowledge,
+                        capabilities, and constraints of humans it interacts
+                        with.
+                    </li>
+                    <li>
+                        A human should be aware of the knowledge, capabilities,
+                        and constraints of computers they interact with.
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="jsolite">
+                <h2>jsolite</h2>
+                <p>Posted on August 6, 2024</p>
+
+                <p>javascript object syntax over sqlite</p>
+                <a href="https://github.com/kolecreates/jsolite" target="_blank"
+                    >GITHUB SOURCE CODE</a
+                >
+
+                <p>
+                    i've long felt there could be a more idiomatic database for
+                    javascript.
+                </p>
+
+                <p>
+                    i.e. one that feels more like javascript and less an SQL
+                    interface
+                </p>
+
+                <ul>
+                    <li>
+                        the bun (<a href="https://bun.sh" target="_blank"
+                            >https://bun.sh</a
+                        >) runtime has a builtime synchronous sqlite client that
+                        is very ergonomic and very performant.
+                    </li>
+                    <li>
+                        The bun client is based on
+                        https://www.npmjs.com/package/better-sqlite3 so the hope
+                        is that this library can be run on nodejs too by
+                        configuring an adapter.
+                    </li>
+                    <li>
+                        the synchronous nature of the sqlite client makes the
+                        map and array operations feel like their vanilla js
+                        counterpart. no promises/async/await/trycatch.
+                    </li>
+                    <li>
+                        the bun node compatability api does not yet have
+                        node:cluster (<a
+                            href="https://bun.sh/docs/runtime/nodejs-apis"
+                            target="_blank"
+                            >https://bun.sh/docs/runtime/nodejs-apis</a
+                        >). However, it's in the works
+                        <a
+                            href="https://github.com/oven-sh/bun/pull/11492"
+                            target="_blank"
+                            >https://github.com/oven-sh/bun/pull/11492</a
+                        >.
+                    </li>
+                    <li>
+                        as an alternative to node:cluster, one can you use
+                        bun.spawn and bun.serve({ reusePort: true }) to create
+                        multiple bun processes that can handle requests
+                        concurrently.
+                    </li>
+                    <li>
+                        sqlite WAL mode allows multiple concurrent readers and
+                        the writer does not block the readers.
+                    </li>
+                    <li>
+                        sqlite can be easily backed up and restored because it's
+                        a single file (2 files if including the WAL file which
+                        is persisted on macos)
+                    </li>
+                </ul>
+
+                <h4>Questions:</h4>
+                <ul>
+                    <li>
+                        what are the performance/scaling characteristics? So far
+                        it seems very good for most low-to-medium scale
+                        applications. To help with scaling, it is easy to create
+                        table partitions and even database partitions. More on
+                        this to come.
+                    </li>
+                    <li>
+                        how to handle the intercept/hooks feature across
+                        multiple spawned bun processes? Because the same code is
+                        running on each process, the same intercept/hook code
+                        will execute. It's that simple.
+                    </li>
+                    <li>
+                        how to achieve zero downtime deployments? I do not think
+                        it is possible without the two container versions
+                        sharing the same file system. However, I think a couple
+                        minutes of downtime is acceptable especially during
+                        low-traffic hours. Also, if application code is built
+                        ontop a "serverless" runtime, instead of baked into the
+                        container image, most deployments won't involve an
+                        instance restart/swap. more on this to come.
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="tcp-relay-server">
+                <h2>TCP Relay Server</h2>
+                <p>Posted August 3, 2024</p>
+
+                <p>
+                    Just completed the first pass at writing a basic TCP relay
+                    server "Written in Rust"™️®. Getting Rust programs to
+                    compile has a similar feeling of doing a newspaper sodoku.
+                    Its been a good learning experience.
+                </p>
+
+                <p>
+                    The purpose of this tcp relay server is to eventually act as
+                    a relay for replicas in a distributed pubsub cluster.
+                    Replicas that receive a message from client A and need to
+                    broadcast to client B that is connected to another replica
+                    will broadcast the message through the relay.
+                </p>
+
+                <p>
+                    Without the relay server, the replicas would need to connect
+                    to each other directly, which <i>is</i> a possible
+                    alternative btw.
+                </p>
+
+                <a
+                    href="https://gist.github.com/kolecreates/e874c00c8aa9e3f650722f0174de58f6"
+                    target="_blank"
+                    >Source code</a
+                >
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="s3-database">
+                <h2>S3 as a Database</h2>
+                <p>Posted on August 1, 2024.</p>
+                <p>
+                    Update on August 8, 2024: I'm thinking about
+                    <a href="/posts/jsolite.html">jsolite</a> instead.
+                </p>
+                <p>
+                    Can S3 be used in place of a database? Should S3 be used in
+                    place of a database?
+                </p>
+                <p>
+                    I saw a comment on stackoverflow "s3 wasn't designed for
+                    that". Perhaps they're right, but this is just an excercise
+                    at this point. If it were to work out and actually be good
+                    for some situations - then fantastic! If it sucks - then I
+                    know more about databases and distributed systems.
+                </p>
+
+                <h4>Notes:</h4>
+                <ul>
+                    <li>
+                        Each replica of the s3db server will post a file to s3
+                        with it's IP address. Each replica periodically lists
+                        the IPs, and inits a tcp connection to any replicas that
+                        have a lesser IP than its own. This way all replicas
+                        will automatically discover and connect to each other.
+                    </li>
+                    <li>
+                        S3 is strongly consistent but there is no native locking
+                        feature, so locking has to be implemented in the s3db
+                        server logic. This is probably going to be the greatest
+                        source of complexity and latency within the entire
+                        system.
+                    </li>
+                    <li>
+                        I have some thoughts on how locking might work, but i'll
+                        write more about that later.
+                    </li>
+                </ul>
+
+                <h4>Resources:</h4>
+                <ul>
+                    <li>
+                        <a
+                            href="https://docs.aws.amazon.com/athena/latest/ug/performance-tuning-s3-throttling.html"
+                            target="_blank"
+                        >
+                            https://docs.aws.amazon.com/athena/latest/ug/performance-tuning-s3-throttling.html
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://grisha.org/blog/2013/05/11/relational-database-on-top-of-key-value-store-explained/"
+                            target="_blank"
+                        >
+                            https://grisha.org/blog/2013/05/11/relational-database-on-top-of-key-value-store-explained/
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://en.wikipedia.org/wiki/B%2B_tree"
+                            target="_blank"
+                        >
+                            https://en.wikipedia.org/wiki/B%2B_tree
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <hr />
+            <a href="#top">back to top</a>
+
+            <article id="thought-diet">
+                <h2>Thought Diet</h2>
+                <p>Posted on July 31, 2024. Update on August 3, 2024</p>
+                <p>
+                    Today I'm starting a thought diet. Here are the guidelines:
+                </p>
+                <ul>
+                    <li>
+                        I can only think about computer stuff while I'm at the
+                        computer (unless I specifically get up from the computer
+                        to pace around the room over a problem)
+                    </li>
+                    <li>
+                        Avoid simulating the past, future or possible realities
+                    </li>
+                    <li>
+                        Focus on smells, sounds, tastes, feelings, and entities
+                        around me
+                    </li>
+                </ul>
+                <p>I'll keep this page updated (I think) as I go.</p>
+
+                <p>
+                    a few days later, i'm doing ok with it. I have violated the
+                    first guideline several times. I give myself slack, it's a
+                    longterm lifestyle goal, not a fad.
+                </p>
+
+                <p>Peace and love,</p>
+                <p>Kole</p>
+            </article>
+        </main>
+
+        <footer>
+            <p>You are a good person. Follow your heart.</p>
+        </footer>
+    </body>
 </html>
