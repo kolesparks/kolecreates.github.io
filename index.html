@@ -128,7 +128,7 @@
                 </p>
                 <p>
                     However, computing is just a piece of the puzzle. The world
-                    is an integrated system - no part isn't of at least some
+                    is an integrated system - every part is of at least some
                     interest to me.
                 </p>
                 <p>
@@ -138,6 +138,9 @@
             </section>
 
             <nav>
+                <a href="json-columns-are-tech-debt"
+                    >JSON Columns are Tech Debt</a
+                >
                 <a href="#single-file-site">Single File Site</a>
                 <a href="#software-patents">Software Patents</a>
                 <a href="#universal-economic-value">Universal Economic Value</a>
@@ -149,6 +152,36 @@
                 <a href="#s3-database">S3 as a Database</a>
                 <a href="#thought-diet">Thought Diet</a>
             </nav>
+
+            <article id="json-columns-are-tech-debt">
+                <h2>JSON Columns are Technical Debt</h2>
+                <p>Posted May 5th, 2025</p>
+
+                <p>
+                    On many occasions i've stuffed data into a json column
+                    instead of a proper normalized schema.
+                </p>
+
+                <p>
+                    Most of the time, i'm just trying to implement something
+                    fast, for one reason or another. Rarely is there a true
+                    technical justification.
+                </p>
+
+                <p>However, there are good use cases for json columns:</p>
+                <ul>
+                    <li>truly unstructured data</li>
+                    <li>
+                        when the number of fields exceeds or approaches the
+                        databases column limit
+                    </li>
+                </ul>
+
+                <p>
+                    There could be more, but the above are the reasons i've
+                    encountered.
+                </p>
+            </article>
 
             <article id="single-file-site">
                 <h2>Single File Site</h2>
