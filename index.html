@@ -138,7 +138,9 @@
             </section>
 
             <nav>
-                <a href="#ai-zeitgeist-explained">AI Zeitgeist Explained</a>
+                <a href="kiro-ide">Kiro IDE</a>
+                <a href="prolog-dabble">Prolog Dabble</a>
+                <a href="#ai-conjectures">A few AI Conjectures</a>
                 <a href="#json-columns-are-tech-debt"
                     >JSON Columns are Tech Debt</a
                 >
@@ -154,14 +156,113 @@
                 <a href="#thought-diet">Thought Diet</a>
             </nav>
 
-            <article id="ai-zeitgeist-explained">
-                <h2>AI Zeitgeist Explained</h2>
-                <p>Posted May 7th, 2025</p>
+            <article id="kiro-ide">
+                <h2>Kiro IDE</h2>
+                <p>Posted Aug 14th, 2025</p>
 
                 <p>
-                    There's a mood toward AI, an intuition, a gut feel so many
-                    people have but cannot quite explain. Here are three
-                    statements that crystalize it:
+                    A download code hit my inbox the other day for the new
+                    AWS-backed Kiro AI IDE.
+                </p>
+
+                <p>
+                    The Kiro AI IDE boasts "spec-driven development" as its
+                    unique take on AI assisted coding. This had me excited
+                    initially. I have advocated for something like spec-driven
+                    development for years - before vibe coding was coined a
+                    term.
+                </p>
+
+                <p>
+                    After a couple hours of using it to build a complex
+                    enterprise-grade home health agency management system / EHR
+                    system, I conclude the following:
+                </p>
+
+                <ul>
+                    <li>
+                        Spec files need to be divided up, based on feature or
+                        other sensible organization principle, and it appears
+                        Kiro does not provide any guidance to the developer or
+                        agent to do this well. The agent was happy to try to fit
+                        all the requirements and design for the entire
+                        enterprise system in a single spec file. Sure, I as the
+                        developer could have steered the agent to do this, but I
+                        should not have to just know, and to know how, to do
+                        that in an IDE built for such a development methodology.
+                    </li>
+                    <li>
+                        There is no rich-link between "task" and requirement,
+                        only text, and the IDE doesn't, to my knowledge, connect
+                        these two in a rich way. And it certainly doesn't
+                        connect in the other direction (requirement to task).
+                    </li>
+                    <li>
+                        Tests seem to be an afterthought. I had to remind the
+                        agent to write test a few times. and there is not rich
+                        link between tests and requirements in the spec.
+                    </li>
+                    <li>
+                        Test quality is low. The agent wrote extremely brittle,
+                        implementation dependent tests - trying to write unit
+                        tests for modules that clearly warrant integration or
+                        end to end tests.
+                    </li>
+                </ul>
+
+                <p>
+                    Overall, Kiro, at this early stage, provides very little
+                    structure over the typical AI assisted coding workflow
+                    established by other tools like Cursor, Copilot, Claude
+                    Code. It needs to be more structured, more streamlined,
+                    otherwise it feels like a weird middleground that is not
+                    better than vibe coding.
+                </p>
+            </article>
+
+            <article id="prolog-dabble">
+                <h2>Prolog Dabble</h2>
+                <p>Posted Aug 14th, 2025</p>
+
+                <p>
+                    I recently went down the rabbit hole of learning Prolog, one
+                    of the original logic programming languages. In simple
+                    terms, Prolog allows you to define a knowledge base of facts
+                    and rules, then query the knowledge base to ask questions or
+                    find solutions that satisfy all the constraints.
+                </p>
+
+                <p>
+                    I've yet to find a real use-case for Prolog in my line of
+                    work. Though, I will keep it as a tool in my toolbox,
+                    because I have a gut feeling it will be useful one day. Or
+                    at least, the understanding of logic programming will be
+                    useful.
+                </p>
+
+                <p>
+                    Additionally, I hypothesized that an LLM could produce
+                    Prolog facts, rules, and queries in two useful ways. 1.
+                    simply dumping its internal knowledge into Prolog knowledge
+                    2. translating ambiguous, fuzzy human language into
+                    unambiguous, precise Prolog. I found that LLMs are no more
+                    capable of doing this for Prolog than other programming
+                    languages or formalisms. Also, LLMs suffer from context
+                    windows and context rot which limits the size of the Prolog
+                    knowledge base it can reason over - akin to codebases scale
+                    issues in other languages. Lastly, trust in LLM output
+                    remains low, and that undermines the guarantees Prolog has
+                    to offer.
+                </p>
+            </article>
+
+            <article id="ai-conjectures">
+                <h2>A Few AI Conjectures</h2>
+                <p>Posted May 7th, 2025. Updated August 14th, 2025</p>
+
+                <p>
+                    Three back of the napkin statements that I believe hold true
+                    about artificial intelligence:
                 </p>
 
                 <ul>
