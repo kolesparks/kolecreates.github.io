@@ -54,15 +54,29 @@
             }
 
             nav {
+                width: 100%;
+                overflow: hidden;
+                padding: 0;
+            }
+
+            nav ol {
+                list-style-type: none;
                 display: flex;
                 flex-direction: row;
                 gap: 1em;
                 flex-wrap: nowrap;
                 width: 100%;
                 overflow-x: scroll;
+                padding: 0;
+                height: 60px;
+                align-items: center;
             }
 
-            nav a {
+            nav ol li {
+                display: inline-block;
+            }
+
+            nav ol li a {
                 text-decoration: none;
                 color: #000;
                 padding: 0.5em;
@@ -138,27 +152,104 @@
             </section>
 
             <nav>
-                <a href="#kiro-ide">Kiro IDE</a>
-                <a href="#prolog-dabble">Prolog Dabble</a>
-                <a href="#ai-conjectures">A few AI Conjectures</a>
-                <a href="#json-columns-are-tech-debt"
-                    >JSON Columns are Tech Debt</a
-                >
-                <a href="#single-file-site">Single File Site</a>
-                <a href="#software-patents">Software Patents</a>
-                <a href="#universal-economic-value">Universal Economic Value</a>
-                <a href="#open-knowledge-engine">Open Knowledge Engine</a>
-                <a href="#cellular-agriculture">Cellular Agriculture</a>
-                <a href="#k">K</a>
-                <a href="#jsolite">jsolite</a>
-                <a href="#tcp-relay-server">TCP Relay Server</a>
-                <a href="#s3-database">S3 as a Database</a>
-                <a href="#thought-diet">Thought Diet</a>
+                <ol>
+                    <li>
+                        <a
+                            href="#minimal-systems"
+                            onmousedown="window.location.href='/#minimal-systems'"
+                        >
+                            Minimal Systems
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#kiro-ide">Kiro IDE</a>
+                    </li>
+                    <li>
+                        <a href="#prolog-dabble">Prolog Dabble</a>
+                    </li>
+                    <li>
+                        <a href="#ai-conjectures">A few AI Conjectures</a>
+                    </li>
+                    <li>
+                        <a href="#json-columns-are-tech-debt"
+                            >JSON Columns are Tech Debt</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#single-file-site">Single File Site</a>
+                    </li>
+                    <li>
+                        <a href="#software-patents">Software Patents</a>
+                    </li>
+                    <li>
+                        <a href="#universal-economic-value"
+                            >Universal Economic Value</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#open-knowledge-engine"
+                            >Open Knowledge Engine</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#cellular-agriculture">Cellular Agriculture</a>
+                    </li>
+                    <li>
+                        <a href="#k">K</a>
+                    </li>
+                    <li>
+                        <a href="#jsolite">jsolite</a>
+                    </li>
+                    <li>
+                        <a href="#tcp-relay-server">TCP Relay Server</a>
+                    </li>
+                    <li>
+                        <a href="#s3-database">S3 as a Database</a>
+                    </li>
+                    <li>
+                        <a href="#thought-diet">Thought Diet</a>
+                    </li>
+                </ol>
             </nav>
+
+            <article id="minimal-systems">
+                <h2>Minimal Systems</h2>
+                <p>Posted Aug 17th, 2025</p>
+
+                <ul>
+                    <li>
+                        How complicated, robust, performant, scalable can a
+                        system be that is created with a minimal toolset?
+                    </li>
+                    <li>
+                        How minimal can the toolset of a complicated, robust,
+                        performant, scalable system be?
+                    </li>
+                </ul>
+                <!--
+                <p>
+                    To answer these questions, we need to put them to the test.
+                    And because these are relative questions, before we can put
+                    them to the test, we need to choose a toolset (X), and a
+                    system (Y).
+                </p>
+
+                <p>
+                    Toolset X needs to be "simple" relative to what is
+                    considered "simple" tech by industry cultures/norms. Some
+                    candidates:
+                </p>
+                <ul>
+                    <li>SQLite</li>
+                    <li>vanilla html,css,javascript</li>
+                    <li>?</li>
+                </ul> -->
+            </article>
 
             <article id="kiro-ide">
                 <h2>Kiro IDE</h2>
                 <p>Posted Aug 14th, 2025</p>
+                <p>Updated Aug 17th, 2025</p>
 
                 <p>
                     A download code hit my inbox the other day for the new
@@ -218,7 +309,19 @@
                     otherwise it feels like a weird middleground that is not
                     better than vibe coding.
                 </p>
+
+                <p>
+                    P.S. A few folks have developed workflows with other tools
+                    that are inspired by Kiro/spec-driven development. This is
+                    my recommendation for any AI coders. Fork one of these
+                    workflows or create your own that is agnostic to any
+                    specific AI coding brand. You really dont want to be locked
+                    into a specific tool right now.
+                </p>
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="prolog-dabble">
                 <h2>Prolog Dabble</h2>
@@ -256,6 +359,9 @@
                 </p>
             </article>
 
+            <hr />
+            <a href="#top">back to top</a>
+
             <article id="ai-conjectures">
                 <h2>A Few AI Conjectures</h2>
                 <p>Posted May 7th, 2025. Updated August 14th, 2025</p>
@@ -279,6 +385,9 @@
                     </li>
                 </ul>
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="json-columns-are-tech-debt">
                 <h2>JSON Columns are Technical Debt</h2>
@@ -309,6 +418,9 @@
                     encountered.
                 </p>
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="single-file-site">
                 <h2>Single File Site</h2>
