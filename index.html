@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Kole Sparks</title>
+        <meta name="description" content="Fullstack consultant and solo builder." />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
@@ -24,6 +25,7 @@
                 width: 100%;
                 max-height: 100%;
                 max-width: 100%;
+                overflow-x: hidden;
                 overflow-y: auto;
             }
 
@@ -35,6 +37,17 @@
                 padding: 1em;
                 width: 100%;
                 text-align: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            header img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
             }
 
             main {
@@ -59,6 +72,11 @@
                 padding: 0;
             }
 
+            nav h4 {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
             nav ol {
                 list-style-type: none;
                 display: flex;
@@ -70,6 +88,8 @@
                 padding: 0;
                 height: 60px;
                 align-items: center;
+                 margin-top: 0.5em;
+                margin-bottom: 0.5em;
             }
 
             nav ol li {
@@ -129,13 +149,14 @@
     </head>
     <body>
         <header>
+            <img src="./kole-headshot.jpeg" alt="headshot of Kole Sparks"/>
             <h1 id="top">Kole Sparks</h1>
         </header>
         <main>
             <section>
                 <h2>About Me</h2>
                 <p>
-                    7 years fullstack dev. Consulting for an <a href="https://villagecaregiving.com" target="_blank">in-home care company</a>. Solo building with Bun, sqlite, vanilla html/css/js - running on <a href="https://railway.com?referralCode=ABSfL6" target="_blank">Railway</a>. 
+                    7 years fullstack dev. Ex-Amazon SDE2. Consulting for an <a href="https://villagecaregiving.com" target="_blank">in-home care company</a>. Solo building with Bun, sqlite, vanilla html/css/js - running on <a href="https://railway.com?referralCode=ABSfL6" target="_blank">Railway</a>. 
                 </p>
                 <p>
                     My work is dedicated to Anna, Owen, Moose, Bunga, fam, and all those who came before me.
@@ -157,11 +178,11 @@
             <nav>
                 
                 <h4>
-                    Posts
+                    Posts ➡️
                 </h4>
                 <ol>
                      <li>
-                        <a href="#hey-world-blog">Hey World Blog</a>
+                        <a href="#race-to-the-bottom">Race to the Bottom</a>
                     </li>
                     <li>
                         <a href="#future-of-platform-engineering">Future of Platform Engineering</a>
@@ -226,14 +247,27 @@
                 </ol>
             </nav>
 
-            <article id="hey-world-blog">
-                <h2>Hey World, the blog is moving</h2>
-                <p>Posted Jan 3rd, 2026</p>
+            <article id="race-to-the-bottom">
+                <h2>The Race to the Bottom</h2>
+                <p>Posted Jan 5th, 2026</p>
+                <p>
+                    The race to the top of the abstraction stack is a race to the bottom of the market.
+                    <br/>
+                    Easy tech attracts more devs and more devs means more competition.
+                    <br/>
+                    Easy tech is abstraction and abstraction is specialization. Specialization has a narrow market. Narrow market means fewer buyers to compete over.
+                    <br/>
+                    LLM coding accelerates this. LLM coding lets more people build stuff with easy tech. And fast. 
+                    <br/>
+                    More stuff. More people. Fast. This is a race to the bottom.
+                    <br/>
+                    My advise: get out of the race - almost everyone will be a loser.
+                </p>
 
-                <p>I'm moving my email to hey.com and with it comes a really cool feature where you can email world@hey.com and your email becomes a blog post.</p>
-
-                <p>Follow me: <a href="http://world.hey.com/kole.sparks">world.hey.com/kole.sparks</a></p>
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="future-of-platform-engineering">
                 <h2>Draft: The Future of Platform Engineering</h2>
@@ -263,6 +297,9 @@
                     </li>
                 </ul>
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="minimal-systems">
                 <h2>Minimal Systems</h2>
@@ -297,6 +334,9 @@
                     <li>?</li>
                 </ul> -->
             </article>
+
+            <hr />
+            <a href="#top">back to top</a>
 
             <article id="kiro-ide">
                 <h2>Kiro IDE</h2>
@@ -920,7 +960,7 @@
                 <p>Posted on August 6, 2024</p>
 
                 <p>javascript object syntax over sqlite</p>
-                <a href="https://github.com/kolecreates/jsolite" target="_blank"
+                <a href="https://github.com/kolesparks/jsolite" target="_blank"
                     >GITHUB SOURCE CODE</a
                 >
 
@@ -1039,7 +1079,7 @@
                 </p>
 
                 <a
-                    href="https://gist.github.com/kolecreates/e874c00c8aa9e3f650722f0174de58f6"
+                    href="https://gist.github.com/kolesparks/e874c00c8aa9e3f650722f0174de58f6"
                     target="_blank"
                     >Source code</a
                 >
@@ -1053,7 +1093,7 @@
                 <p>Posted on August 1, 2024.</p>
                 <p>
                     Update on August 8, 2024: I'm thinking about
-                    <a href="/posts/jsolite.html">jsolite</a> instead.
+                    <a href="#jsolite">jsolite</a> instead.
                 </p>
                 <p>
                     Can S3 be used in place of a database? Should S3 be used in
