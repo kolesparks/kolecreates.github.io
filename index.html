@@ -201,6 +201,10 @@
                     Posts ➡️
                 </h4>
                 <ol>
+
+                    <li>
+                        <a href="#prisma-is-the-repository-layer">Prisma is the Repository Layer</a>
+                    </li>
                     <li>
                         <a href="#llm-coding-break">Taking a break from LLM coding</a>
                     </li>
@@ -270,6 +274,21 @@
                 </ol>
             </nav>
 
+            <article id="prisma-is-the-repository-layer">
+                <h2>Prisma is the Repository Layer</h2>
+                <p>Posted Jan 22nd, 2026</p>
+
+                <p>
+                    There are codebases that implement repository interfaces that wrap <a href="https://prisma.io/orm" target="_blank">Prisma ORM</a>. There are articles that promote this pattern. I think it is an anti-pattern. 
+                    Prisma is already a typescript-first abstraction over your database. Wrapping method calls in your own interface is over-abstraction. The method called and the arguments passed to it are almost always directly relevant to the surrounding logic.  
+                    By wrapping the prisma logic in a function, you are hiding domain logic, not incidental information. You try to name your repository methods clearly but inevitably fail to capture the behavior precisely. 
+                    You will end up writing hundreds of specialized repository methods or worse just reuse an existing method that only half meets your needs or selects more data than necessary because you're lazy. What about really complex stuff and code reuse? I'm not saying you can't ever declare prisma logic in a separate function. Just handle modularity how you do anywhere else. 
+                    And remember Prisma has Client Extensions which let you add custom methods to the client - this is much more elegant than creating your own interface layer ontop - or tucking them away in some lib or utils file that future devs/you won't find. 
+                    What about testability? This has no influence. Regardless of patterns, be extremely cautious of mocking the database, as it can give you false confidence and is extra test infrastructure to maintain. 
+                    Just use @testcontainers or sqlite db. What if we decide to switch our ORM? 1. The amount of refactoring is equivalent in large code bases due to the number of specialized methods you end up with when using the repository pattern
+                    2. you can rather easily implement a shim for the prisma client that is backed by whatever library you want. heck, write some tests and ask claude code to build you one.
+                </p>
+            </article>
 
             <article id="llm-coding-break">
                 <h2>Taking a break from LLM Coding</h2>
