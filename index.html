@@ -287,12 +287,18 @@
                         <li>
                            None of the research projects have reached production-grade status. This is more important than many think. How do we know it's possible? How do we know the total cost/time? We cannot determine the real-world production-grade time and resource costs by extrapolation. Getting software to production-grade (100% done) is generally disproportionately more expensive than getting it to 20%, 40%, 70%, 90%. 
                         </li>
-                        <li>
+                         <li>
                            We already know how scaling software development goes. We have Amdahl's law, Brook's law, Conway's law - and plenty of research by big tech companies. Yes, you can scale to thousands of developers, but you do make trade-offs, and there is work that cannot be parallelized.
+                        </li>
+                        <li>
+                            What about $$$? I wasn't able to find numbers from Cursor. But they did say they are using recent models like Opus 4.5 and GPT 5.2. I can attempt to approximate. First, we need to approximate using API pricing, not subscription pricing, because with 2000 agents you would definitely axhuast a single subscription and TOS says you can't exploit multiple subs/account share. 
+                            A recent <a href="https://www.reddit.com/r/ClaudeAI/comments/1qfosa6/did_the_math_on_claude_code_pricing_how_are_other/" target="_blank" rel="noreferrer">Reddit Post</a> breakdown an estimate of how much the equivalent usage that claude code subscription gives you would cost in as-you-go API pricing. It is in the range of a few thousand dollars. Let's be generous and say you get $1000. 
+                            Now Claude Code Subscription usage is complicated, changing, and inconsistent across users. I'll be generous and say you can get usage equivalent to 10 parallel claude code sessions 24/hr per day on Max x20 plan. 10 agents, 24/hr per day, $1000/month. 2,000 agents  / 10 = 200. 200 * $1000/month = $200,000/month. This number is so shocking I feel that I must be missing something. 
+                            You could hire a world-class team for this.
                         </li>
                     </ol>
 
-                    I find the swarm-coding endevour peculiar. It feels like we're not learning from the past and ignoring the true capability of the computing power we have. What is much more promising is the research by Google and others into combining LLMs with formal methods to search massive solution spaces. 
+                    Even from a pure theoretic perspective, I find the swarm-coding endevour peculiar. It feels like we're not learning from the past and ignoring the true capability of the computing power we have. What is much more promising is the research by Google and others into combining LLMs with formal methods to search massive solution spaces. 
                     To me, this is a more rigorous way of using compute. Cursor's work feels like watching a bunch of monkeys type on a keyboard - hoping a perfect copy of the linux kernal will appear.
                 </p>
             </article>
@@ -411,24 +417,6 @@
                         performant, scalable system be?
                     </li>
                 </ul>
-                <!--
-                <p>
-                    To answer these questions, we need to put them to the test.
-                    And because these are relative questions, before we can put
-                    them to the test, we need to choose a toolset (X), and a
-                    system (Y).
-                </p>
-
-                <p>
-                    Toolset X needs to be "simple" relative to what is
-                    considered "simple" tech by industry cultures/norms. Some
-                    candidates:
-                </p>
-                <ul>
-                    <li>SQLite</li>
-                    <li>vanilla html,css,javascript</li>
-                    <li>?</li>
-                </ul> -->
             </article>
 
             <hr />
