@@ -291,10 +291,16 @@
                            We already know how scaling software development goes. We have Amdahl's law, Brook's law, Conway's law - and plenty of research by big tech companies. Yes, you can scale to thousands of developers, but you do make trade-offs, and there is work that cannot be parallelized.
                         </li>
                         <li>
-                            What about $$$? I wasn't able to find numbers from Cursor. But they did say they are using recent models like Opus 4.5 and GPT 5.2. I can attempt to approximate. First, we need to approximate using API pricing, not subscription pricing, because with 2000 agents you would definitely axhuast a single subscription and TOS says you can't exploit multiple subs/account share. 
-                            A recent <a href="https://www.reddit.com/r/ClaudeAI/comments/1qfosa6/did_the_math_on_claude_code_pricing_how_are_other/" target="_blank" rel="noreferrer">Reddit Post</a> breakdown an estimate of how much the equivalent usage that claude code subscription gives you would cost in as-you-go API pricing. It is in the range of a few thousand dollars. Let's be generous and say you get $1000. 
-                            Now Claude Code Subscription usage is complicated, changing, and inconsistent across users. I'll be generous and say you can get usage equivalent to 10 parallel claude code sessions 24/hr per day on Max x20 plan. 10 agents, 24/hr per day, $1000/month. 2,000 agents  / 10 = 200. 200 * $1000/month = $200,000/month. This number is so shocking I feel that I must be missing something. 
-                            You could hire a world-class team for this.
+                            What about $$$? I wasn't able to find numbers from Cursor. But they did say they are using recent models like Opus 4.5 and GPT 5.2. I can attempt to approximate. 
+                            First, we need to approximate usage. To do so, I'll use Claude Code w/ Max subscription as the reference point because I have experience with it and so do many devs. Max Subscription usage is complicated, changing, and inconsistent across users. 
+                            So I'll be generous and say you can get usage equivalent to 10 parallel claude code sessions 24/hr per day on Max x20 plan. 
+                            Now, for estimating pricing, we need to use API pricing, not subscription pricing, because with 2000 agents you would definitely axhuast a single subscription and TOS says you can't exploit multiple subs/account share. So we have to use API pricing.
+                            A recent <a href="https://www.reddit.com/r/ClaudeAI/comments/1qfosa6/did_the_math_on_claude_code_pricing_how_are_other/" target="_blank" rel="noreferrer">Reddit Post</a> gives an estimate for how much it would cost in API pricing to use Claude Code as much as you can on the Max x20 Plan. 
+                            It is in the range of a few thousand dollars. Let's be generous and say you get $1000 worth of API usage.
+                            In summary, for $1000/month in API spend, you get 10 agents, 24/hr per day. 2,000 agents = $200,000/month. This number is so shocking I feel that I must be missing something.
+                            The promise of swarm-coding is that it can deliver software so much faster. 
+                            The promise is, yes, you could hire a world-class human team for $200k/month, but they'd take years, and the swarm will take a month.
+                            The promise hinges on production-grade delivery - which remains to be seen.
                         </li>
                     </ol>
 
