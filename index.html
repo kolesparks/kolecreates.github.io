@@ -156,7 +156,7 @@
             <section>
                 <h2>About Me</h2>
                 <p>
-                    7 years fullstack dev. Ex-Amazon SDE2. Building an ERP system for an <a href="https://villagecaregiving.com" target="_blank">in-home care company</a>. Solo building with Bun, sqlite, vanilla html/css/js - running on <a href="https://railway.com?referralCode=ABSfL6" target="_blank">Railway</a>. 
+                    7 years fullstack dev. Ex-Amazon SDE2. Lead engineer on an ERP system for an <a href="https://villagecaregiving.com" target="_blank">in-home care company</a>. Solo building with Bun, sqlite, vanilla html/css/js - running on <a href="https://railway.com?referralCode=ABSfL6" target="_blank">Railway</a>. 
                 </p>
                 <p>
                     My work is dedicated to Anna, Owen, Moose, Bunga, fam, and all those who came before me.
@@ -183,6 +183,11 @@
                     Posts ➡️
                 </h4>
                 <ol>
+                    <li>
+                        <a href="#swarm-coding-does-not-work">
+                            Swarm Coding Does Not Work
+                        </a>
+                    </li>
                     <li>
                         <a href="#headline-filter-release">
                             Headline Filter Release
@@ -260,13 +265,45 @@
                 </ol>
             </nav>
 
+
+            <article id="swarm-coding-does-not-work">
+                <h2>Swarm Coding Does Not Work</h2>
+                <p>Posted Jan 24th, 2026</p>
+
+                <p>
+                    Cursor recently published a blog post detailing their <a href="https://cursor.com/blog/scaling-agents" target="blank">scaling of long-running autonomous coding</a>. 
+                    They are running upwards of 2,000 agents in parallel to build classically hard to build software. 
+                    Their projects include a browser, Excel clone, Windows 7 emulator, and Java LSP Server. 
+                    These agentic loops have generated millions of lines of code across tens of thousands of commits over the span of weeks. 
+                    Research like this is valuable to the engineering community regardless of what the future of software looks like. 
+                    We get emperical evidence on how agentic coding scales. Evidence that may help prove it worthy or unworthy of humanity's attention.
+                    All that beings said, I am skeptical. My hunch is that agentic coding does not scale in a meaningful way and will never scale assuming the foundation model architectures remain relatively static.
+                    <ol>
+                        <li>
+                          Cursor's projects (Excel, Browser, etc.) are all building against existing specifications of software that already exists. 
+                    Having a crystal clear battle-tested specification of what to build is massive advantage and one that virtually does not exist in the real software market. 
+                    Yes, there is a market for rebuilding existing software, but the rebuild has to be different in some fundamental way in order to be valuable, and that difference in design makes things much harder that simply cloning the original.
+                        </li>
+                        <li>
+                           None of the research projects have reached production-grade status. This is more important than many think. How do we know it's possible? How do we know the total cost/time? We cannot determine the real-world production-grade time and resource costs by extrapolation. Getting software to production-grade (100% done) is generally disproportionately more expensive than getting it to 20%, 40%, 70%, 90%. 
+                        </li>
+                        <li>
+                           We already know how scaling software development goes. We have Amdahl's law, Brook's law, Conway's law - and plenty of research by big tech companies. Yes, you can scale to thousands of developers, but you do make trade-offs, and there is work that cannot be parallelized.
+                        </li>
+                    </ol>
+
+                    I find the swarm-coding endevour peculiar. It feels like we're not learning from the past and ignoring the true capability of the computing power we have. What is much more promising is the research by Google and others into combining LLMs with formal methods to search massive solution spaces. 
+                    To me, this is a more rigorous way of using compute. Cursor's work feels like watching a bunch of monkeys type on a keyboard - hoping a perfect copy of the linux kernal will appear.
+                </p>
+            </article>
+
             <article id="headline-filter-release">
                 <h2>Headline Filter Release</h2>
                 <p>Posted Jan 24th, 2026</p>
                 <p>
                     My latest project <a href="https://www.headlinefilter.com" target="_blank">Headline Filter</a> sifts through news headlines to find the ones you ask for. 
                     You see only what you want to see. No algorithm. No ads. No trackers. No unsolicited content to distract you. Simple and free.
-                    Coded by hand using Bun, vanilla html/css/js. Http streaming for real-time results. Gemma 3n 4b model for super fast and efficient inference. <a href="https://scrapingfish.com/" target="_blank">Scrapingfish</a> for ethical and simple scraping + novel technique to scrape and decode links in one request.
+                    Coded by hand using Bun, vanilla html/css/js. Http streaming for real-time results. Gemma 3n 4b model for super fast and efficient inference. <a href="https://scrapingfish.com/" target="_blank" >Scrapingfish</a> for ethical and simple scraping + novel technique to scrape and decode links in one request.
                     Open source on <a href="https://github.com/kolesparks/headlinefilter" target="_blank"> GitHub</a> under the <a href="https://world.hey.com/dhh/the-o-saasy-license-336c5c8f" target="_blank">O Saasy License</a> and hosted on <a href="https://railway.com?referralCode=ABSfL6" target="_blank">Railway</a>.
                 </p>
             </article>
