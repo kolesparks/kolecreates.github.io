@@ -1,0 +1,1 @@
+Bun.file('./resume.html').write(Bun.markdown.html(await Bun.file('./resume.md').text()));
