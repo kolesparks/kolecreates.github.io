@@ -1,5 +1,5 @@
 # Kole Sparks
-kole.sparks@hey.com
+kole.sparks@hey.com | kolesparks.com
 
 ## Skills
 - **Frontend**: React, Nextjs, Capacitor, React Native
