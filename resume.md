@@ -2,8 +2,8 @@
 kole.sparks@hey.com
 
 ## Skills
-- **Frontend**: React, Vite, Nextjs, Capacitor, React Native
-- **Backend/DevOps**: Nodejs, Bun, AWS, CDK, CI/CD, Docker, Postgres
+- **Frontend**: React, Nextjs, Capacitor, React Native
+- **Backend**: Nodejs, AWS, CDK, Docker, Postgres
 - **Languages**: Typescript, SQL
 - **General**: System Design, Product/UX Design, Team Lead, Automated Testing, Linux/MacOS
 
@@ -15,12 +15,12 @@ Jan 2023 - Present
 #### Home Care Agency Management System
 
 - Lead the product, design, architecture, and development of an Agency Management System for one of the largest in-home care companies in the US. 
-- I built scheduling, digital forms / signatures, secure chat, billing, payroll, maps, dashboards, incident reporting, caregiver mobile app, IVR check-in system, ADP employee data sync, and Medicaid EVV Aggregator integrations across 8 different US states. 
+- Built scheduling, digital forms / signatures, secure chat, billing, payroll, maps, dashboards, incident reporting, caregiver mobile app, IVR check-in system, ADP employee data sync, and Medicaid EVV Aggregator integrations across 8 different US states. 
 - The system serves critical business workflows for thousands of employees on AWS (Cognito, RDS, S3, SNS, ECS, Connect), Postgres, Nodejs, React, Capacitor.
 
 #### Media Company Digital Asset Management System
 
-- Built a visual asset matrix UI designed to organize and arrange images intended for stitched composite creation, enabling intuitive management of massive visual datasets.
+- Built a visual asset matrix UI to organize and arrange images for stitched composite creation, enabling intuitive management of massive visual datasets.
 - Developed a high-performance media processing service capable of ingesting and converting diverse and industrial file formats (e.g., RAW, TIFF, sub-codecs).
 - Executed a multi-hundred-terabyte cloud migration from on-premise storage to AWS S3 using Snowball, optimizing long-term costs with Intelligent Tiering and automated Deep Archive backups.
 - Migrated legacy metadata from Excel spreadsheets into structured, queryable PostgreSQL on RDS, and implemented search and classification infrastructure.
