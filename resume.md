@@ -5,6 +5,7 @@ kole.sparks@hey.com | kolesparks.com
 - **Frontend**: React, Nextjs, Capacitor, React Native
 - **Backend**: Nodejs, AWS, CDK, Docker, Postgres
 - **Languages**: Typescript, SQL
+- **AI**: OpenRouter, AWS Bedrock, Google Vertex, Fine-Tuning, MCP, Claude Code, Cursor
 - **General**: System Design, Product/UX Design, Team Lead, Automated Testing, Linux/MacOS
 
 ## Work Experience
