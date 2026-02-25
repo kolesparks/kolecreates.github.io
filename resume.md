@@ -16,7 +16,7 @@ Jan 2023 - Present
 #### Home Care Agency Management System
 
 - Lead the product, design, architecture, and development of an Agency Management System for one of the largest in-home care companies in the US. 
-- Built scheduling, digital forms / signatures, secure chat, billing, payroll, maps, dashboards, incident reporting, caregiver mobile app, IVR check-in system, ADP employee data sync, and Medicaid EVV Aggregator integrations across 8 different US states. 
+- Built scheduling, digital forms / signatures, Gemini-powered document analyzer, secure chat, billing, payroll, maps, dashboards, incident reporting, caregiver mobile app, IVR check-in system, ADP employee data sync, and Medicaid EVV Aggregator integrations across 8 different US states. 
 - The system serves critical business workflows for thousands of employees on AWS (Cognito, RDS, S3, SNS, ECS, Connect), Postgres, Nodejs, React, Capacitor.
 
 #### Media Company Digital Asset Management System
