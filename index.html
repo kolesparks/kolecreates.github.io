@@ -290,22 +290,26 @@
 
                 <p>Automated software tests are more valuable than the implementation code of any substantial software system.</p>
                 <p>
-                    This was true, is still true, more than ever, and will be true. 
+                    This was true, is still true now, more than ever, and will be true in the future. 
                     The SQLite implementation is FOSS but the test suite, regarded as one of the best in the industry, costs money.
                     Recent Cursor and Anthropic research demonstrated the value of tests/specifications by using them to develop complex implementations completely automously.
                     I suspect that the success of many complex enterprise software systems was largely propped up on low-cost offshore QA labor.
                     Refactoring and iteration is such a central part of the software development lifecycle that we have a derogatory term for software that is hard/impossible to change: Legacy.
-                    Good tests allow you to freely change software with limited to no risk. Good tests prevent your software from becoming legacy software.
-                    So why is so much software untested? Why so many legacy systems?
+                    Good tests allow you to freely change software with limited to no risk. Good tests prevent your software from becoming legacy software. Key word: good. 
+                    Tests must meet several criteria to be considered good: 1. implementation agnostic - changed only when system behavior is changed 2. provide a high degree of confidence 3. executed often
+                    Much of the complaints about tests are actually complaints about bad tests. 
+                    So why is so much software untested? Why so many legacy systems? Why so many bad tests?
                     The problem is two fold:
-                    1. the software industry and business world is addicted to short term reward 
+                    1. the software industry and business world is addicted to short term reward
                     2. standard practices for testing are immature at best. 
-                    Further notes:
-                    Now, LLM-coding feeds the addiction without building better practices. 
-                    Ironically, good tests are the solution to most of the problems with LLM-coding. Key word: good. 
-                    Much of the complaints about tests are complaints about bad tests. 
-                    Tests must meet several criteria to be considered good: 1. implementation agnostic - changed only when system behavior is changed 2. provide a high degree of confidence.
-                    To be continued...
+                    Unfortunately, in 2026, we have LLM-coding feeding the addiction without building better practices.
+                    Fortunately, it turns out that tests + LLM-coding is an extremely powerful combination.
+                    Good tests allow you to put more trust in LLM-coded implementations. 
+                    Good tests allow the LLM-based agents to be more autonomous. 
+                    Good tests allow LLM-driven performance optimization.
+                    LLMs get rid of that dreaded feeling of having to write two sides of every feature.
+                    LLMs let us focus on the more valuable side - the tests, the spec, the interface, the user experience.
+                    My mission is to refine my testing practices, prove them, share them, teach them, convince others of them. 
                 </p>
             </article>
 
